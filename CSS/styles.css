@@ -1,0 +1,676 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62,5%;
+/*      width: 100vw;
+    height: 100vw;  */
+}
+
+/*--------------------------------------------------------------*/
+                    /*  APLICANDO GRID AREA - INDEX  */
+/*--------------------------------------------------------------*/
+
+.contenedor {  display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "presentacion presentacion presentacion presentacion"
+      "novedades novedades video video"
+      "novedades novedades video video"
+      "footer footer footer footer";
+  }
+
+/*--------------------------------------------------------------*/
+                    /*  HEADER ALL PAGES  */
+/*--------------------------------------------------------------*/
+
+.header {
+    display: flex;
+    flex-direction: row; 
+    background-color:blue;
+    justify-content: space-between;
+    align-items:center;   
+    grid-area: header;
+}
+
+.imgHeader{
+    width: 10%;
+    height:100%;
+}   
+
+.navegacion {
+     background-color:yellow;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content:end ; */
+    /* align-items:center;  */
+    /* padding-right: 55px; */
+    /* padding-right: 15px; */
+}
+
+.menu li{
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: lightgray;
+    font-family: MuseoModerno;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+}
+
+.submenu li{
+    display: block;
+    background-color: grey;
+}
+
+.submenu a{
+    font-family: MuseoModerno;
+    color: lightgray;
+    font-size: 15px;
+}
+
+.menu li:hover ul{
+    display: block;
+}
+
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN INDEX  */
+/*--------------------------------------------------------------*/
+
+            /* MAIN - PRESENTACION */
+
+.presentacion{
+    /* background-color: #414833; */
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: presentacion;
+}
+
+.presentacion img{
+    /* display: block; */
+    width: 70vw;
+    height: 28vw;
+    padding: 10px;
+}
+
+.presentacion p{
+    width: 80vw;
+    height: 15vw;
+    color: lightcoral;
+    border: 3px solid whitesmoke;
+    font-family: MuseoModerno;
+    overflow:scroll;
+    margin-bottom: 10px;
+} 
+
+            /* MAIN - NOVEDADES */
+
+.novedades{
+    /* background-color: #414833; */
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    grid-area: novedades;
+    justify-content: space-evenly;
+}
+
+.novedades ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.novedades li{
+    list-style-type:none;
+}
+
+.novedades ul li a{
+    text-decoration: none;
+    color: lightgrey;
+    font-family: MuseoModerno;
+    padding: 5px;
+    font-size: 25px;
+    text-align: justify;
+} 
+
+.novedades h2{
+    font-family: MuseoModerno;
+    color: lightgray;
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.7;
+} 
+
+.novedades h3{
+    color: lightcoral;
+    font-family: MuseoModerno;
+    padding: 5px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.novedades a{
+    text-decoration: none;
+    color: yellow;
+    font-family: MuseoModerno;
+    padding: 5px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+            /* MAIN - VIDEOS */
+
+.video{
+    /* background-color: #414833; */
+    background-color: chocolate;
+    color: #a4ac86;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    grid-area: video;
+    flex-wrap: wrap;
+}
+
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - CONTACTO  */
+/*--------------------------------------------------------------*/
+
+            /*MAIN - CONTACTO */
+
+.contacto{
+    font-family: MuseoModerno;
+    color: lightgray;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contacto h1{
+    padding: 5px;
+    margin: 0 0 10px 10px;
+    border: 2px solid lightgreen;
+    width: 250px;
+}
+
+.contacto h2{
+    margin: 0 0 10px 40px;
+    border-bottom: 2px dotted lightgreen;
+}
+
+            /*MAIN - FORMULARIO */
+
+.formulario__contenido{
+    font-family: MuseoModerno;
+    color: lightgray;
+    display: inline-block;
+    margin: 0 0 10px 40px; 
+}
+
+.mapaForm { 
+    width: 350px;
+    height: 250px;
+    margin: 10px;
+}
+
+.imgForm img {
+    width: 350px;
+    height: 250px;
+    margin: 10px;
+}
+
+.chkboxForm {
+    font-family: MuseoModerno;
+    color: lightgray;
+    margin: 0 0 10px 0;
+}
+
+.btnForm input{
+    margin: 10px;
+    background-color: lightsalmon;
+}
+
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - NOSOTROS  */
+/*--------------------------------------------------------------*/
+
+/*  APLICANDO GRID AREA - NOSOTROS  */
+
+.contenedor__nosotros {  display: grid;
+     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.15fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "reseña reseña reseña reseña"
+      "contactoNosotros contactoNosotros contactoNosotros contactoNosotros"
+      "ubicacion ubicacion ubicacion ubicacion"
+      "footer footer footer footer";
+  }
+
+
+            /*MAIN - NOSOTROS*/
+
+/* .nosotros{
+    background-color: #414833;
+} */
+
+.reseña{
+    background-color: #414833;
+    font-family: MuseoModerno;
+    color: lightgray;
+    grid-area: reseña;
+    display: flex;
+    flex-direction: column;
+}
+
+.reseña h2{
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    /* border: 2px solid lightgreen; */
+}
+
+.reseña p{
+    text-align:justify;
+    padding: 10px;
+}
+
+.contactoNosotros{
+    background-color: #414833;
+    font-family: MuseoModerno;
+    color: lightgray;
+    border-bottom: 2px solid lightgreen;
+    border-top: 2px solid lightgreen;
+    grid-area: contactoNosotros;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ubicacion{
+    background-color: #414833;
+    font-family: MuseoModerno;
+    color: lightgray;
+    grid-area: ubicacion;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+/*width="500" height="200"*/
+.ubicacion iframe{
+    width: 500px;
+    height: 300px;
+}
+
+
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - PRODUCTOS  */
+/*--------------------------------------------------------------*/
+
+            /*MAIN - CATALOGO*/
+
+.catalogo{
+    background-color: #414833;
+    font-family: MuseoModerno;
+    color: lightgray;
+}
+
+.catalogo h1{
+    padding: 5px;
+    margin-left: 450px;
+    border: 2px solid lightgreen;
+    width: 200px;
+}
+
+.catalogo h2{
+    margin: 5px;
+}
+
+.catalogo h4{
+    border-bottom: 2px dotted lightyellow;
+    margin: 10px 10px 0 10px;
+    padding-bottom: 5px;
+}
+
+.catalogo p{
+    margin: 10px 10px 0 10px;
+    /* width: 542px; */
+}
+
+#dormitorios img{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - SERVICIOS  */
+/*--------------------------------------------------------------*/
+
+            /*MAIN - LIMPIEZA*/
+
+.servicios {
+    font-family: MuseoModerno;
+    color: lightgray;
+    margin-left: 20px;
+}
+
+.servicios h1{
+    border: 2px solid lightgreen;
+    width: 500px;
+    text-align: center;
+    margin: 10px;
+}
+
+            /*MAIN - LIMPIEZA*/
+
+.limpieza {
+    margin-bottom: 15px;
+    border-bottom: 2px dotted lightgreen;
+}
+
+            /*MAIN - PREGUNTAS*/
+
+.preguntas {
+    border-bottom: 2px dotted lightgreen;   
+}
+
+            /*MAIN - VERIFICACION*/
+
+.verificacion {
+    margin-bottom: 15px;
+}
+
+
+/*--------------------------------------------------------------*/
+                    /*  FOOTER ALL PAGES  */
+/*--------------------------------------------------------------*/
+
+.footer{
+    /* background-color: #414833; */
+    background-color: coral;
+    border-top: 2px solid white;
+    color: lightgray;   
+    font-family: MuseoModerno;
+    display: flex;
+    flex-direction: row;
+     justify-content: space-around; 
+    /* justify-content: space-evenly; */
+    align-items: center;
+    grid-area: footer;
+}
+
+.footer img{
+    width: 100px;
+    height: 45px;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+}
+
+/*--------------------------------------------------------------*/
+    /* INDEX - GRIDS FLEX @MEDIA */
+/*--------------------------------------------------------------*/
+
+        /*  MOBILE  */
+
+ @media screen and (max-width: 480px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,0.5fr);
+        grid-template-areas: 
+        "header"
+        "presentacion"
+        "novedades"
+        "video"
+        "footer";
+    }
+
+    .header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .menu li{
+        font-size: 8px;
+    }
+    .submenu a{
+        font-size: 8px;
+    }
+
+    .presentacion{
+        font-size: 8px;
+        flex-wrap: wrap;
+    }
+
+    .novedades{
+        flex-wrap: wrap;
+    }
+
+    .novedades ul{
+        align-items: center;
+    }
+    .novedades a{
+        font-size: 8px;
+        text-align: center;
+    }
+    .novedades ul li a{
+        font-size: 8px;
+    }
+    .novedades h2{
+        font-size: 8px;
+        text-align: center;
+    }
+    .novedades h3{
+        font-size: 8px;
+        text-align: center;
+    }
+
+    .video{
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* width="280" height="158" */
+    }
+    .video iframe{
+        width: 90px;
+        height: 53px;
+    }
+
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 8px;
+    }
+
+} 
+
+        /*  TABLET  */
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
+        grid-template-areas: 
+        "header header header"
+        "presentacion presentacion presentacion"
+        "novedades novedades video"
+        "novedades novedades video"
+        "footer footer footer";
+    }
+
+    .header{
+        font-size: 12px;
+    }
+
+    .menu li{
+        font-size: 12px;
+    }
+    .submenu a{
+        font-size: 12px;
+    }
+
+    .presentacion{
+        font-size: 12px;
+    }
+
+   .novedades ul{
+        align-items: center;
+    } 
+    .novedades a{
+        font-size: 12px;
+        text-align: center;
+    }
+    .novedades ul li a{
+        font-size: 12px;
+    }
+    .novedades h2{
+        font-size: 12px;
+        text-align: center;
+    }
+    .novedades h3{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .video{
+        flex-wrap: wrap;
+    }
+    .video iframe{
+        width: 90px;
+        height: 53px;
+    }
+
+    .footer{
+        font-size: 12px;
+        justify-content: center;
+    }
+
+}
+
+/*--------------------------------------------------------------*/
+    /* NOSOTROS - GRIDS FLEX @MEDIA */
+/*--------------------------------------------------------------*/
+
+        /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+    .contenedor__nosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,0.5fr);
+        grid-template-areas: 
+        "header"
+        "reseña"
+        "contactoNosotros"
+        "ubicacion"
+        "footer";
+    }
+
+    .header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .menu li{
+        font-size: 8px;
+    }
+
+    .submenu a{
+        font-size: 8px;
+    }
+
+    .reseña{
+        font-size: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contactoNosotros{
+        flex-direction: column;
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .ubicacion {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 8px;
+    }
+
+} 
+
+        /*  TABLET  */
+
+@media screen and (max-width: 768px){
+    .contenedor__nosotros{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.15fr;
+        grid-template-areas: 
+        "header header header"
+        "reseña reseña reseña"
+        "contactoNosotros contactoNosotros contactoNosotros"
+        "ubicacion ubicacion ubicacion"
+        "footer footer footer";
+    }
+
+    .header{
+        font-size: 12px;
+    }
+
+    .menu li{
+        font-size: 8px;
+    }
+
+    .submenu a{
+        font-size: 8px;
+    }
+
+    .reseña{
+        font-size: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactoNosotros{
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .ubicacion {
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .footer{
+        justify-content: center;
+        font-size: 12px;
+    }
+
+} 
