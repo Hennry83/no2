@@ -5,6 +5,7 @@
 
 html{
     font-size: 62,5%;
+    background-color: #414833;
 /*      width: 100vw;
     height: 100vw;  */
 }
@@ -46,17 +47,17 @@ html{
     height:100%;
 }   
 
-.navegacion {
+/* .navegacion {
     background-color: #414833;
-    background-image: linear-gradient(to bottom, #414833 , #778162);
-     /* background-color:yellow; */
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content:end ; */
-    /* align-items:center;  */
-    /* padding-right: 55px; */
-    /* padding-right: 15px; */
-}
+    background-image: linear-gradient(to top, #414833 , #778162);
+    background-color:yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content:end ;
+    align-items:center; 
+    padding-right: 55px;
+    padding-right: 15px;
+} */
 
 .menu li{
     display: inline-block;
@@ -444,10 +445,11 @@ main{
 
             /*MAIN - LIMPIEZA*/
 
-.servicios {
+            .servicios {
     font-family: MuseoModerno;
     color: lightgray;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    background-color: #414833;
 }
 
 .servicios h1{
