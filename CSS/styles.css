@@ -366,7 +366,7 @@ main{
 
 .reseña p{
     text-align:justify;
-    padding: 10px;
+    padding: 10px 90px 25px 90px;
 }
 
 .contactoNosotros{
@@ -388,15 +388,15 @@ main{
     color: lightgray;
     grid-area: ubicacion;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 /*width="500" height="200"*/
 .ubicacion iframe{
-    width: 500px;
-    height: 300px;
-}
+    width: 300px;
+    height: 200px;
+} 
 
 
 /*--------------------------------------------------------------*/
@@ -516,6 +516,11 @@ main{
 .redes img{
     width: 32px;
     height: 32px;
+}
+
+.redes img:hover{
+    background-color:coral;
+    border-radius: 50%;
 }
 
 /*--------------------------------------------------------------*/
