@@ -14,7 +14,7 @@ html{
                     /*  APLICANDO GRID AREA - INDEX  */
 /*--------------------------------------------------------------*/
 
-.contenedor {  display: grid;
+/* .contenedor {  display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
     gap: 0px 0px;
@@ -25,7 +25,7 @@ html{
       "novedades novedades video video"
       "novedades novedades video video"
       "footer footer footer footer";
-  }
+  } */
 
 /*--------------------------------------------------------------*/
                     /*  HEADER ALL PAGES  */
@@ -34,7 +34,6 @@ html{
 .header {
     display: flex;
     flex-direction: row; 
-    /* background-color:blue; */
     background-color: #414833;
     justify-content: space-between;
     align-items:center;   
@@ -47,57 +46,61 @@ html{
     height:100%;
 }   
 
-/* .navegacion {
-    background-color: #414833;
+.miNav{
     background-image: linear-gradient(to top, #414833 , #778162);
-    background-color:yellow;
-    display: flex;
-    flex-direction: row;
-    justify-content:end ;
-    align-items:center; 
-    padding-right: 55px;
-    padding-right: 15px;
-} */
+}
+
+.navHome{
+    font-family: MuseoModerno;
+    color: lightgrey !important;
+    font-size: 18px !important;
+} 
 
 .menu li{
-    display: inline-block;
-    position: relative;
-    font-size: 20px;
-    padding: 10px 10px;
+    background-image: linear-gradient(to top, #414833 , #778162);
 }
 
 .menu li a{
-    text-decoration: none;
-    color: lightgray;
+    font-size: 15px !important;
+    color: lightgray !important;
     font-family: MuseoModerno;
     transition: all 0,5s;
 }
 
 .menu li a:hover{
-    color: rgb(162, 165, 14);
+    color: rgb(162, 165, 14) !important;
 }
 
-.submenu{
+.navHome:hover{
+    color: rgb(162, 165, 14) !important;
+}
+
+/* .submenu{
     display: none;
     position: absolute;
 }
+ */
 
 .submenu li{
-    display: block;
-    /* background-color: grey; */
-    background-color: #292e21;
+    /* display: block;
+    background-color: #292e21; */
     background-image: linear-gradient(to right, #414833 , #778162);
 }
 
-.submenu a{
+.submenu li a:hover{
+    color: rgb(162, 165, 14) !important;
+    background-image: linear-gradient(to right, #414833 , #778162);
+}
+
+/* .submenu a{
     font-family: MuseoModerno;
     color: lightgray;
     font-size: 15px;
-}
+} */
 
-.menu li:hover ul{
-    display: block;
-}
+/* .menu li:hover ul a{
+    color: rgb(162, 165, 14);
+} */
 
 /*--------------------------------------------------------------*/
                     /*  STYLES MAIN INDEX  */
@@ -107,37 +110,41 @@ html{
 
 .presentacion{
     background-color: #414833;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: presentacion;
 }
 
-.presentacion img{
-    /* display: block; */
-    width: 70vw;
-    height: 28vw;
-    padding: 10px;
-    transition: all 2s;
-    /* filter: grayscale(100%); preguntar xq queda superpuesto tapando el submenu cdo lo activo */
+.miCarrusel{
+    width: 40%;
+    height: auto; 
+    /* padding: 10px; */
+     transition: all 2s; 
+    filter: grayscale(100%);
 }
 
-.presentacion img:hover{
-    width: 90vw;
-    height: 40vw;
+.miCarrusel img{
+    border-radius: 1%;
+}
+
+.miCarrusel:hover{
     filter: none;
-    padding: 20px;
-} 
+    /* width: 70%; */
+    transform: scale(1.4);
+}
+
 
 .presentacion p{
+    /* width: 80vw;
+    height: 15vw; */
     width: 80vw;
-    height: 15vw;
+    height: 30vh;
     color: lightcoral;
     border: 3px solid whitesmoke;
     font-family: MuseoModerno;
     overflow:scroll;
-    margin-bottom: 10px;
+    margin: 15px 0;
 } 
 
             /* MAIN - NOVEDADES */
@@ -145,7 +152,6 @@ html{
 .novedades{
     background-color: #414833;
     background-image: linear-gradient(to left,#778162, #414833 );
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     grid-area: novedades;
@@ -173,12 +179,13 @@ html{
 } 
 
 .novedades ul li a:hover {
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(162, 165, 14);
 }
 
 .novedades h2{
-    font-family: MuseoModerno;    color: lightgray;
+    font-family: MuseoModerno;    
+    color: lightgray;
     margin: 5px;
     padding: 5px;
     font-size: 15px;
@@ -189,7 +196,7 @@ html{
 
 .novedades h2:hover{
     color: rgb(162, 165, 14);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .novedades h3{
@@ -204,7 +211,7 @@ html{
 
 .novedades h3:hover{
     color: rgb(162, 165, 14);
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
@@ -237,6 +244,10 @@ html{
     margin: 5px;
 }
 
+.video p{
+    width: 400px;
+}
+
 /* .video__reales{
     width: 280px;
     height: 158px;
@@ -253,7 +264,6 @@ html{
 .video p:hover{
     color: rgb(162, 165, 14);
     font-size: 20px;
-
 }
 
 
@@ -262,8 +272,7 @@ html{
 /*--------------------------------------------------------------*/
 
             /*MAIN - CONTACTO */
-
-main{
+body{
     background-color: #414833;
 }
 
@@ -271,19 +280,21 @@ main{
     font-family: MuseoModerno;
     color: lightgray;
     margin-bottom: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
 }
 
 .contacto h1{
     padding: 5px;
-    margin: 0 0 10px 10px;
-    border: 2px solid lightgreen;
-    width: 250px;
+    align-self: flex-start;
+    margin: 20px 0 0 3%;
 }
 
 .contacto h2{
-    margin: 0 0 10px 40px;
     border-bottom: 2px dotted lightgreen;
+    align-self:stretch;
+    margin-left: 20%;
 }
 
             /*MAIN - FORMULARIO */
@@ -296,40 +307,85 @@ main{
 .formulario__contenido{
     font-family: MuseoModerno;
     color: lightgray;
-    display: inline-block;
-    margin: 0 0 10px 10px; 
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
 }
 
 .formulario__contenido input{
     transition: all 2s;
+    width: 35%;
 }
 
 .formulario__contenido input:focus {
-    width: 200px;
+    width: 50%;
     font-size: 24px;
 }
 
-.mapaForm { 
-    width: 350px;
-    height: 250px;
-    margin: 10px;
+.formulario__contenido select{
+    width: 20%;
 }
 
-.imgForm img {
-    width: 350px;
-    height: 250px;
-    margin: 10px;
+.formulario__contenido textarea{
+    width: 60%;
+    margin-bottom: 1%;
 }
 
-.chkboxForm {
+.chkboxForm{
     font-family: MuseoModerno;
     color: lightgray;
-    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
-.btnForm input{
+.chkboxForm p{
+    margin-left: 5%;
+    color: rgb(3, 3, 51);
+}
+
+.chkboxForm input{
+    margin-left: 15px;
+}
+
+.btnFormContacto{
+    font-family: MuseoModerno;
+    color: lightgray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnForm {
+    font-family: MuseoModerno;
+    font-weight: bold;
+    color: rgb(3, 3, 51);
     margin: 10px;
-    background-color: lightsalmon;
+    background-color: lightcoral;
+    margin-left: 5%;
+}
+
+.btnForm:hover{
+    background-color: darkslategrey;
+}
+
+.mapaForm { 
+    display: flex;
+    flex-direction: row;
+}
+
+.mapaForm iframe{
+    width: 80%;
+    height: 92%;
+    margin: 10px;
+}
+
+.carruselContacto {
+    width: 70%;
+    height: auto; 
+     transition: all 2s; 
+     padding: 10px;
+    /* filter: grayscale(100%); */
 }
 
 /*--------------------------------------------------------------*/
@@ -580,9 +636,10 @@ main{
     flex-direction: row;
     justify-content: space-around; 
     /* justify-content: space-evenly; */
-    align-items: center;
+    align-items: end;
     grid-area: footer;
     background-image: linear-gradient(to top, #414833 , #778162);
+    margin-bottom: 10px;
 }
 
 .footer img{
@@ -621,32 +678,27 @@ main{
 
         /*  MOBILE  */
 
- @media screen and (max-width: 480px){
-    .contenedor{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5,0.5fr);
-        grid-template-areas: 
-        "header"
-        "presentacion"
-        "novedades"
-        "video"
-        "footer";
-    }
+  @media screen and (max-width: 480px){
 
     .header{
         flex-direction: column;
         flex-wrap: wrap;
     }
 
+    .imgHeader{
+        width: 80px;
+        height: 40px;
+    }  
+
     .menu li{
-        font-size: 8px;
+        font-size: 10px;
     }
     .submenu a{
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .presentacion{
-        font-size: 8px;
+        font-size: 10px;
         flex-wrap: wrap;
     }
 
@@ -658,43 +710,60 @@ main{
         align-items: center;
     }
     .novedades a{
-        font-size: 8px;
+        font-size: 10px;
         text-align: center;
     }
     .novedades ul li a{
-        font-size: 8px;
+        font-size: 10px;
     }
     .novedades h2{
-        font-size: 8px;
+        font-size: 10px;
         text-align: center;
     }
     .novedades h3{
-        font-size: 8px;
+        font-size: 10px;
         text-align: center;
     }
 
     .video{
         flex-direction: column;
-        flex-wrap: wrap;
-        /* width="280" height="158" */
+        flex-wrap: wrap; 
     }
     .video iframe{
         width: 90px;
         height: 53px;
     }
 
+    .video p{
+        font-size: 10px;
+        width: 100px;
+    }
+
     .footer{
         flex-direction: column;
         flex-wrap: wrap;
-        font-size: 8px;
+        font-size: 10px;
+    }
+    .footer h4{
+        font-size: 10px;
     }
 
-} 
+    .footer img{
+        width: 75px;
+        height: 25px; 
+    }
+
+    .redes img{
+        width: 16px;
+        height: 16px;
+    }
+
+}
 
         /*  TABLET  */
 
-@media screen and (max-width: 768px){
-    .contenedor{
+ @media screen and (max-width: 768px){
+   /*  .contenedor{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
         grid-template-areas: 
@@ -702,40 +771,39 @@ main{
         "presentacion presentacion presentacion"
         "novedades novedades video"
         "novedades novedades video"
-        "footer footer footer";
-    }
+        "footer footer footer"; */
 
     .header{
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .menu li{
-        font-size: 12px;
+        font-size: 13px;
     }
     .submenu a{
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .presentacion{
-        font-size: 12px;
+        font-size: 13px;
     }
 
    .novedades ul{
         align-items: center;
     } 
     .novedades a{
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
     }
     .novedades ul li a{
-        font-size: 12px;
+        font-size: 13px;
     }
     .novedades h2{
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
     }
     .novedades h3{
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
     }
 
@@ -748,14 +816,29 @@ main{
     }
 
     .footer{
-        font-size: 12px;
-        justify-content: center;
+        font-size: 13px;
+        justify-content:space-between;
+        align-items: center;
     }
 
-}
+    .footer h4{
+        font-size: 13px;
+    }
+
+    .footer .imgFooter{
+        width: 100px;
+        height: 35px; 
+    }
+    
+    .redes img{
+        width: 24px;
+        height: 24px;
+    }    
+
+} 
 
 /*--------------------------------------------------------------*/
-    /* NOSOTROS - GRIDS FLEX @MEDIA */
+    /* NOSOTROS - GRIDS FLEX @MEDIA */ /* MODIFICAR SEGUN FOOTER DEL INDEX */
 /*--------------------------------------------------------------*/
 
         /*  MOBILE  */
@@ -807,7 +890,20 @@ main{
     .footer{
         flex-direction: column;
         flex-wrap: wrap;
-        font-size: 8px;
+        font-size: 10px;
+    }
+    .footer h4{
+        font-size: 10px;
+    }
+
+    .footer img{
+        width: 75px;
+        height: 25px; 
+    }
+
+    .redes img{
+        width: 16px;
+        height: 16px;
     }
 
 } 
@@ -855,8 +951,142 @@ main{
     }
 
     .footer{
+        font-size: 13px;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .footer h4{
+        font-size: 13px;
+    }
+
+    .footer .imgFooter{
+        width: 100px;
+        height: 35px; 
+    }
+    
+    .redes img{
+        width: 24px;
+        height: 24px;
+    } 
+} 
+
+/*--------------------------------------------------------------*/
+    /* CONTACTO - GRIDS FLEX @MEDIA */
+/*--------------------------------------------------------------*/
+        
+            /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .header{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .imgHeader{
+        width: 80px;
+        height: 40px;
+    }  
+
+    .menu li{
+        font-size: 10px;
+    }
+    .submenu a{
+        font-size: 10px;
+    }
+
+    .contacto{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
         justify-content: center;
-        font-size: 12px;
+    }
+
+    .contacto h1{
+        font-size: 14px;
+    }
+    .contacto h2{
+        font-size: 14px;
+    }
+    .formulario__contenido{
+        font-size: 10px;
+    }
+
+    .formulario__contenido input:focus {
+        width: 25%;
+        font-size: 15px;
+    }
+
+    .chkboxForm input{
+        margin-left: 5px;
+    }
+
+    .chkboxForm p{
+        font-size: 10px;
+    }
+
+    .btnForm {
+        font-family: MuseoModerno;
+        color: rgb(3, 3, 51);
+        font-size: 7px;
+        background-color: lightcoral;
+        margin-left: 5%;
+    }
+
+    .mapaForm { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .imgForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 8px;
     }
 
 } 
+
+        /*  TABLET  */
+
+@media screen and (max-width: 768px){
+
+    .header{
+        font-size: 12px;
+    }
+
+    .menu li{
+        font-size: 8px;
+    }
+
+    .submenu a{
+        font-size: 8px;
+    }
+
+    
+    .footer{
+        font-size: 13px;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .footer h4{
+        font-size: 13px;
+    }
+
+    .footer .imgFooter{
+        width: 100px;
+        height: 35px; 
+    }
+
+    .redes img{
+        width: 24px;
+        height: 24px;
+    } 
+}

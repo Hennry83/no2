@@ -5,90 +5,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../images/logos/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>NO2 - Contacto</title>
+
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <header class="header">
-        <img class="imgHeader" src="../images/headerNav/header.png" alt="Logo de la empresa" title="Logo de la empresa">
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="productos.html">Productos</a>
-                    <ul class="submenu">
-                        <li><a href="productos.html">Cocinas</a></li>
-                        <li><a href="productos.html">Dormitorios</a></li>
-                        <li><a href="productos.html">Livings</a></li>
-                        <li><a href="productos.html">Escritrios</a></li>
-                        <li><a href="productos.html">Exterior</a></li>
-                        <li><a href="productos.html">Racks</a></li>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="header col-12">
+                <img class="imgHeader" src="../images/headerNav/header.png" alt="Logo de la empresa"
+                    title="Logo de la empresa">
+                <!-- NAVEGADOR BOOTSTRAP -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light miNav">
+                    <div class="container-fluid">
+                        <a class="navbar-brand navHome" href="../index.html">Home</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav menu">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="servicios.html">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Productos
+                                    </a>
+                                    <ul class="dropdown-menu submenu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="productos.html">Cocinas</a></li>
+                                        <li><a class="dropdown-item" href="productos.html">Dormitorios</a></li>
+                                        <li><a class="dropdown-item" href="productos.html">Livings</a></li>
+                                        <li><a class="dropdown-item" href="productos.html">Escritrios</a></li>
+                                        <li><a class="dropdown-item" href="productos.html">Exterior</a></li>
+                                        <li><a class="dropdown-item" href="productos.html">Racks</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--                 <nav class="navegacion">
+                    <ul class="menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a>
+                            <ul class="submenu">
+                                <li><a href="productos.html">Cocinas</a></li>
+                                <li><a href="productos.html">Dormitorios</a></li>
+                                <li><a href="productos.html">Livings</a></li>
+                                <li><a href="productos.html">Escritrios</a></li>
+                                <li><a href="productos.html">Exterior</a></li>
+                                <li><a href="productos.html">Racks</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="">Contacto</a></li>
                     </ul>
-                </li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+                </nav> -->
+            </header>
+        </div>
 
-    <main>
-        <div class="contacto">
-            <h1>CONTACTENOS</h1>
-            <h2>Envianos tus consultas</h2>
+        <div class="row">
+            <div class="contacto col-12">
+                <h1>CONTACTENOS</h1>
+                <h2>Envianos tus consultas</h2>
+            </div>
         </div>
-        <div class="formulario">
-            <form class="formulario__contenido">
-                <label for="nombre">Nombre y Apellido :</label>
-                <input type="text" placeholder="Ingrese su nombre" value="" name="nombre">
-                <label for="email">Mail:</label>
-                <input type="email" name="" id="" placeholder="Ingrese su email">
-                <label for="telefono">Telefono</label>
-                <input type="tel" name="telefono" id="" placeholder="Ingrese su telefono">
-                <label for="ciudad">Ciudad, Provincia:</label>
-                <input type="text" placeholder="Ingrese ciudad donde vive" value="" name="nombre">
-                <label for="asunto">Asunto:</label>
-                <select name="asunto" id="">
-                    <option value="gral">Consulta General</option>
-                    <option value="prod">Por Productos</option>
-                    <option value="prom">Por Promociones</option>
-                    <option value="suge">Sugerencias</option>
-                    <option value="otro">Otro asunto</option>
-                </select>
-                <label for="mensaje">Mensaje</label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Deje su mensaje aqui"></textarea>
-            </form>
+        <div class="row">
+            <div class="formulario col-12">
+                <form class="formulario__contenido">
+                    <label for="nombre">Nombre y Apellido :</label>
+                    <input type="text" placeholder="Ingrese su nombre" value="" name="nombre">
+                    <label for="email">Mail:</label>
+                    <input type="email" name="" id="" placeholder="Ingrese su email">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" id="" placeholder="Ingrese su telefono">
+                    <label for="ciudad">Ciudad, Provincia:</label>
+                    <input type="text" placeholder="Ingrese ciudad donde vive" value="" name="nombre">
+                    <label for="asunto">Asunto:</label>
+                    <select name="asunto" id="">
+                        <option value="gral">Consulta General</option>
+                        <option value="prod">Por Productos</option>
+                        <option value="prom">Por Promociones</option>
+                        <option value="suge">Sugerencias</option>
+                        <option value="otro">Otro asunto</option>
+                    </select>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Deje su mensaje aqui"></textarea>
+                </form>
+                <div class="chkboxForm">
+                    <p>Queres recibir nuestros newsletters?</p>
+                    <input type="checkbox" name="acepta" value="1">
+                </div>
+                <div class="btnFormContacto">
+                    <button type="button" class="btn btn-primary btnForm">Enviar formulario</button>
+                    <button type="button" class="btn btn-secondary btnForm">Limpiar formulario</button>
+                </div>
+            </div>
         </div>
-        <div class="mapaForm">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.777551982788!2d-64.21079262610762!3d-31.45848992364184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a252bdaa4f0f%3A0x8a8c10efe83015d6!2sHorizonte%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1645993417671!5m2!1ses!2sar"
-                width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="row">
+            <div class="mapaForm col-sm-12 col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6806.777551982788!2d-64.21079262610762!3d-31.45848992364184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a252bdaa4f0f%3A0x8a8c10efe83015d6!2sHorizonte%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1645993417671!5m2!1ses!2sar"
+                    width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="imgForm col-sm-12 col-md-6">
+                <!-- CARRUSEL DE IMAGENS -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide carruselContacto" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../images/contacto/1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../images/contacto/2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../images/contacto/3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../images/contacto/4.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="imgForm">
-            <img src="../images/main/4.png" alt="imagen formulario contacto" width="250px" height="200px">
+        <div class="row">
+            <footer id="piePagina" class="footer col-12">
+                <a href="../pages/contacto.html"><img class="imgFooter" src="../images/footer/footer.png"
+                        alt="Logo de la empresa" title="Logo de la empresa"></a>
+                <h4>© 2021 Copyright - NO2 Todos los derechos reservados</h4>
+                <div class="redes">
+                    <a href="https://www.facebook.com/nodos.equipamientos"><img class="imgFace"
+                            src="../images/footer/face_white.png" alt=""></a>
+                    <a href="https://instagram.com/no2equipamientos?utm_medium=copy_link"><img class="imgInsta"
+                            src="../images/footer/insta_white.png" alt=""></a>
+                </div>
+            </footer>
         </div>
-        <div class="chkboxForm">Queres recibir nuestros newsletters?
-            <input type="checkbox" name="acepta" value="1">
-        </div>
-        <div class="btnForm">
-            <input type="submit" value="Enviar formulario">
-            <input type="reset" value="Limpiar formulario">
-        </div>
-    </main>
-    <footer id="piePagina" class="footer">
-        <a href="../pages/contacto.html"><img src="../images/footer/footer.png" alt="Logo de la empresa" title="Logo de la empresa"></a>
-        <h4>© 2021 Copyright - NO2 Todos los derechos reservados</h4>
-        <div class="redes">
-            <a href="https://www.facebook.com/nodos.equipamientos"><img class="imgFace" src="../images/footer/face_white.png" alt=""></a>
-            <a href="https://instagram.com/no2equipamientos?utm_medium=copy_link"><img class="imgInsta" src="../images/footer/insta_white.png" alt=""></a>
-        </div>
-    </footer>
+    </div>
 </body>
 
 </html>
