@@ -6,26 +6,7 @@
 html{
     font-size: 62,5%;
     background-color: #414833;
-/*      width: 100vw;
-    height: 100vw;  */
 }
-
-/*--------------------------------------------------------------*/
-                    /*  APLICANDO GRID AREA - INDEX  */
-/*--------------------------------------------------------------*/
-
-/* .contenedor {  display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header header"
-      "presentacion presentacion presentacion presentacion"
-      "novedades novedades video video"
-      "novedades novedades video video"
-      "footer footer footer footer";
-  } */
 
 /*--------------------------------------------------------------*/
                     /*  HEADER ALL PAGES  */
@@ -75,15 +56,7 @@ html{
     color: rgb(162, 165, 14) !important;
 }
 
-/* .submenu{
-    display: none;
-    position: absolute;
-}
- */
-
 .submenu li{
-    /* display: block;
-    background-color: #292e21; */
     background-image: linear-gradient(to right, #414833 , #778162);
 }
 
@@ -91,16 +64,6 @@ html{
     color: rgb(162, 165, 14) !important;
     background-image: linear-gradient(to right, #414833 , #778162);
 }
-
-/* .submenu a{
-    font-family: MuseoModerno;
-    color: lightgray;
-    font-size: 15px;
-} */
-
-/* .menu li:hover ul a{
-    color: rgb(162, 165, 14);
-} */
 
 /*--------------------------------------------------------------*/
                     /*  STYLES MAIN INDEX  */
@@ -210,9 +173,9 @@ html{
 }
 
 .novedades h3:hover{
-    color: rgb(162, 165, 14);
-    font-size: 25px;
-}
+    /* color: rgb(162, 165, 14);  */
+    font-size: 22px;
+} 
 
 
 .novedades a{
@@ -229,7 +192,6 @@ html{
 .video{
     background-color: #414833;
     background-image: linear-gradient(to left, #414833 , #778162);
-    /* background-color: chocolate; */
     color: #a4ac86;
     display: flex;
     flex-direction: row-reverse;
@@ -242,17 +204,13 @@ html{
 
 .video iframe{
     margin: 5px;
+    width: 200px;
+    height: 120px;
 }
 
 .video p{
     width: 400px;
 }
-
-/* .video__reales{
-    width: 280px;
-    height: 158px;
-    margin: 5px;
-} */
 
 .video p{
     padding-left: 10px;
@@ -282,7 +240,6 @@ body{
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    /* align-items: stretch; */
 }
 
 .contacto h1{
@@ -392,27 +349,7 @@ body{
                     /*  STYLES MAIN - NOSOTROS  */
 /*--------------------------------------------------------------*/
 
-/*  APLICANDO GRID AREA - NOSOTROS  */
-
-.contenedor__nosotros {  display: grid;
-     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.15fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header header"
-      "reseña reseña reseña reseña"
-      "contactoNosotros contactoNosotros contactoNosotros contactoNosotros"
-      "ubicacion ubicacion ubicacion ubicacion"
-      "footer footer footer footer";
-  }
-
-
             /*MAIN - NOSOTROS*/
-
-/* .nosotros{
-    background-color: #414833;
-} */
 
 .reseña{
     background-color: #414833;
@@ -488,6 +425,7 @@ body{
 .ubicacion iframe{
     width: 300px;
     height: 200px;
+    margin: 10px 0;
 } 
 
 
@@ -498,12 +436,9 @@ body{
             /*MAIN - CATALOGO*/
 .titulo{
     padding: 5px;
-    margin-left: 450px;
-    border: 2px solid lightgreen;
-    width: 200px;
     font-family: MuseoModerno;
-    text-align: center;
     color: lightgray;
+    text-align: center;
 }
 
 .catalogo{
@@ -511,8 +446,8 @@ body{
     padding: 0 20px;
     font-family: MuseoModerno;
     color: lightgray;
-    display: flex;
-    flex-direction: column;
+/*     display: flex;
+    flex-wrap: wrap; */
     transition: all 1s;
 }
 
@@ -540,86 +475,265 @@ body{
     text-align: justify;
 }
 
+.cocinas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .cocinas img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
+
+.cocinas img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.cocinas iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.dormitorios{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .dormitorios img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
+
+.dormitorios img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.dormitorios iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.livings{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .livings img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
 
+.livings img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.livings iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.escritorios{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .escritorios img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
+
+.escritorios img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.escritorios iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.exterior{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .exterior img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
+
+.exterior img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.exterior iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.racks{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .racks img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
+}
+
+.racks img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.racks iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.qubos{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .qubos img{
     width: 200px;
     height: 120px;
     padding: 5px;
+    transition: all 2s;
 }
+
+.qubos img:hover{
+    transform: scale(1.9);
+    z-index: 1;
+}
+
+.qubos iframe{
+    width: 200px;
+    height: 120px;
+    padding: 5px;
+}
+
+.carruselProductos {
+    width: 250px;
+    height: 140px; 
+    padding: 5px;
+    transition: all 2s;
+}
+
+.carruselProductos:hover{
+    transform: scale(1.9);
+}
+
+
 
 /*--------------------------------------------------------------*/
                     /*  STYLES MAIN - SERVICIOS  */
 /*--------------------------------------------------------------*/
 
-            /*MAIN - LIMPIEZA*/
+            /*MAIN - SERVICIOS*/
 
-            .servicios {
+.servicios {
     font-family: MuseoModerno;
     color: lightgray;
-    /* margin-left: 20px; */
     background-color: #414833;
+    text-align: center;
+}
+
+.servicios .tituloLimpieza{
+    text-align: center;
+    margin: 10px;
+    transition: all 1s;
 }
 
 .servicios h1{
-    border: 2px solid lightgreen;
-    width: 500px;
-    text-align: center;
+    text-align:start;
     margin: 10px;
+    transition: all 1s;
+    background-image: linear-gradient(to right,#414833, #778162);
+}
+
+.servicios h1:hover{
+    color: rgb(162, 165, 14);
 }
 
             /*MAIN - LIMPIEZA*/
 
 .limpieza {
+    display: flex;
+    text-align: justify;
     margin-bottom: 15px;
     border-bottom: 2px dotted lightgreen;
+    padding: 0 20px;
+    background-image: linear-gradient(to top,#414833, #778162);
 }
 
             /*MAIN - PREGUNTAS*/
 
 .preguntas {
-    border-bottom: 2px dotted lightgreen;   
+    border-bottom: 2px dotted lightgreen;  
+    display: flex; 
+    background-image: linear-gradient(to top,#414833, #778162);
+}
+
+.miAcordion{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+}
+
+.miAcordion__item{
+     font-family: MuseoModerno;
+     color: rgb(162, 165, 14);
+     background-color: #464d3a;
+     font-size: 16px; 
+     text-align: justify;
+}
+
+.miAcordion__btn{
+     font-family: MuseoModerno;
+     color: coral;
+     font-size: 16px; 
+     background-color: #778162;
+     height: 10px;
+     padding: 15px;
+}
+
+.miAcordion__btn:focus{
+    background-color: lightcoral;
+    color: darkblue;
 }
 
             /*MAIN - VERIFICACION*/
 
 .verificacion {
-    margin-bottom: 15px;
+    display: flex;
+    text-align: justify;
+    padding: 0 20px;
+    background-image: linear-gradient(to top,#414833, #778162);
 }
 
 
@@ -672,9 +786,9 @@ body{
     border-radius: 40%; 
 }
 
-/*--------------------------------------------------------------*/
-    /* INDEX - GRIDS FLEX @MEDIA */
-/*--------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------*/
+        /* INDEX - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
 
         /*  MOBILE  */
 
@@ -685,16 +799,17 @@ body{
         flex-wrap: wrap;
     }
 
+    .navHome{
+        font-size: 6px !important;
+    } 
+
+    .menu li a{
+        font-size: 6px !important;
+    }
+
     .imgHeader{
         width: 80px;
         height: 40px;
-    }  
-
-    .menu li{
-        font-size: 10px;
-    }
-    .submenu a{
-        font-size: 10px;
     }
 
     .presentacion{
@@ -745,43 +860,39 @@ body{
         font-size: 10px;
     }
     .footer h4{
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .footer img{
-        width: 75px;
-        height: 25px; 
+        width: 55px;
+        height: 15px; 
     }
 
     .redes img{
         width: 16px;
         height: 16px;
     }
-
 }
 
         /*  TABLET  */
 
  @media screen and (max-width: 768px){
-   /*  .contenedor{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.15fr;
-        grid-template-areas: 
-        "header header header"
-        "presentacion presentacion presentacion"
-        "novedades novedades video"
-        "novedades novedades video"
-        "footer footer footer"; */
 
     .header{
         font-size: 13px;
     }
 
-    .menu li{
-        font-size: 13px;
+    .navHome{
+        font-size: 13px !important;
+    } 
+
+    .menu li a{
+        font-size: 13px !important;
     }
-    .submenu a{
-        font-size: 13px;
+
+    .imgHeader{
+        width: 120px;
+        height: 60px;
     }
 
     .presentacion{
@@ -837,164 +948,135 @@ body{
 
 } 
 
-/*--------------------------------------------------------------*/
-    /* NOSOTROS - GRIDS FLEX @MEDIA */ /* MODIFICAR SEGUN FOOTER DEL INDEX */
-/*--------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
+        /* NOSOTROS - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
 
         /*  MOBILE  */
 
 @media screen and (max-width: 480px){
-    .contenedor__nosotros{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5,0.5fr);
-        grid-template-areas: 
-        "header"
-        "reseña"
-        "contactoNosotros"
-        "ubicacion"
-        "footer";
-    }
 
-    .header{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
 
-    .menu li{
-        font-size: 8px;
-    }
-
-    .submenu a{
-        font-size: 8px;
-    }
-
-    .reseña{
-        font-size: 10px;
+    .reseña h2{
+        font-size: 13px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .reseña p{
+        font-size: 8px;
+        flex-direction: row;
+        height: 250px;
+        overflow:scroll;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
     }
 
     .contactoNosotros{
         flex-direction: column;
         justify-content: center;
-        font-size: 10px;
+    }
+
+    .contactoNosotros h3{
+        font-size: 8px;
+    }
+
+    .contactoNosotros h5{
+        font-size: 8px;
     }
 
     .ubicacion {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .footer{
-        flex-direction: column;
-        flex-wrap: wrap;
+    .ubicacion h3{    
+        font-size: 13px;
+    }
+
+    .ubicacion p{    
         font-size: 10px;
     }
-    .footer h4{
-        font-size: 10px;
+
+    .ubicacion iframe{
+        width: 200px;
+        height: 100px;
+        margin: 5px 0;
     }
 
-    .footer img{
-        width: 75px;
-        height: 25px; 
-    }
-
-    .redes img{
-        width: 16px;
-        height: 16px;
-    }
-
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
 } 
 
         /*  TABLET  */
 
 @media screen and (max-width: 768px){
-    .contenedor__nosotros{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 0.1fr 1fr 0.1fr 1fr 0.15fr;
-        grid-template-areas: 
-        "header header header"
-        "reseña reseña reseña"
-        "contactoNosotros contactoNosotros contactoNosotros"
-        "ubicacion ubicacion ubicacion"
-        "footer footer footer";
-    }
 
-    .header{
-        font-size: 12px;
-    }
-
-    .menu li{
-        font-size: 8px;
-    }
-
-    .submenu a{
-        font-size: 8px;
-    }
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
 
     .reseña{
-        font-size: 12px;
         justify-content: center;
         align-items: center;
     }
 
+    .reseña h2{
+        font-size: 18px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .reseña p{
+        font-size: 14px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .contactoNosotros{
         justify-content: center;
+        font-size: 14px;
+    }
+
+    .contactoNosotros h3{
+        font-size: 12px;
+    }
+
+    .contactoNosotros h5{
         font-size: 12px;
     }
 
     .ubicacion {
         align-items: center;
-        font-size: 12px;
     }
 
-    .footer{
-        font-size: 13px;
-        justify-content:space-between;
-        align-items: center;
+    .ubicacion h3{    
+        font-size: 18px;
     }
 
-    .footer h4{
+    .ubicacion p{    
         font-size: 13px;
     }
 
-    .footer .imgFooter{
-        width: 100px;
-        height: 35px; 
+    .ubicacion iframe{
+        width: 215px;
+        height: 120px;
+        margin: 10px 0;
     }
-    
-    .redes img{
-        width: 24px;
-        height: 24px;
-    } 
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
 } 
 
-/*--------------------------------------------------------------*/
-    /* CONTACTO - GRIDS FLEX @MEDIA */
-/*--------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------*/
+            /* CONTACTO - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
         
             /*  MOBILE  */
 
 @media screen and (max-width: 480px){
 
-    .header{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .imgHeader{
-        width: 80px;
-        height: 40px;
-    }  
-
-    .menu li{
-        font-size: 10px;
-    }
-    .submenu a{
-        font-size: 10px;
-    }
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
 
     .contacto{
         flex-direction: column;
@@ -1045,11 +1127,17 @@ body{
         justify-content: center;
     }
 
-    .footer{
-        flex-direction: column;
-        flex-wrap: wrap;
-        font-size: 8px;
+    .mapaForm iframe{
+        width: 215px;
+        height: 120px;
     }
+    
+    .carruselContacto {
+        width: 230px;
+        height: auto;
+    }
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
 
 } 
 
@@ -1057,36 +1145,408 @@ body{
 
 @media screen and (max-width: 768px){
 
-    .header{
-        font-size: 12px;
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+    .contacto{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: center;
     }
 
-    .menu li{
-        font-size: 8px;
+    .contacto h1{
+        font-size: 18px;
+    }
+    .contacto h2{
+        font-size: 18px;
+    }
+    .formulario__contenido{
+        font-size: 14px;
     }
 
-    .submenu a{
-        font-size: 8px;
+    .formulario__contenido input:focus {
+        width: 55%;
+        font-size: 18px;
     }
 
+    .chkboxForm input{
+        margin-left: 10px;
+    }
+
+    .chkboxForm p{
+        font-size: 14px;
+    }
+
+    .btnForm {
+        font-size: 9px;
+        margin-left: 10%;
+    }
+
+    .mapaForm { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .imgForm {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .mapaForm iframe{
+        width: 280px;
+        height: 150px;
+    }
     
-    .footer{
-        font-size: 13px;
-        justify-content:space-between;
-        align-items: center;
+    .carruselContacto {
+        width: 290px;
+        height: auto;
     }
+    
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+}
 
-    .footer h4{
-        font-size: 13px;
-    }
+/*---------------------------------------------------------------------------------------------------------*/
+            /* PRODUCTOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+       
+                    /*MOBILE*/
 
-    .footer .imgFooter{
-        width: 100px;
-        height: 35px; 
-    }
+@media screen and (max-width: 480px){
 
-    .redes img{
-        width: 24px;
-        height: 24px;
-    } 
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+.titulo{
+font-size: 14px;
+}
+
+.catalogo{
+    padding: 0 10px;
+}
+
+.catalogo h2{
+    margin: 5px;
+    font-size: 14px;
+}
+
+.catalogo h4{
+    margin: 5px 5px 0 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.catalogo p{
+    margin: 5px 5px 0 5px;
+    text-align: justify;
+    font-size: 10px;
+}
+
+.cocinas img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.cocinas iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.dormitorios img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.dormitorios iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.livings img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.livings iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.escritorios img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.escritorios iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.exterior img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.exterior iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.racks img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.racks iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.qubos img{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+.qubos iframe{
+    width: 100px;
+    height: 75px;
+    padding: 2px;
+}
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+}                     
+
+        
+                    /*TABLET*/
+
+@media screen and (max-width: 768px){
+
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+.titulo{
+font-size: 18px;
+}
+
+.catalogo{
+    padding: 0 10px;
+}
+
+.catalogo h2{
+    margin: 5px;
+    font-size: 18px;
+}
+
+.catalogo h4{
+    margin: 5px 5px 0 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.catalogo p{
+    margin: 5px 5px 0 5px;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.cocinas img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.cocinas iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.dormitorios img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.dormitorios iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.livings img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.livings iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.escritorios img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.escritorios iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.exterior img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.exterior iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.racks img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.racks iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.qubos img{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+.qubos iframe{
+    width: 140px;
+    height: 90px;
+    padding: 3px;
+}
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+            /* SERVICIOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+            
+                    /*MOBILE*/
+@media screen and (max-width: 480px){
+
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+.servicios .tituloLimpieza{
+    margin: 10px;
+    font-size: 14px;
+}
+
+.servicios h1{
+    margin: 5px;
+    font-size: 14px;
+}
+
+.servicios p{
+    font-size: 10px;
+}
+
+.limpieza {
+    margin-bottom: 7px;
+    padding: 0 10px;
+}
+
+.miAcordion{
+    width: 70%;
+    height: auto;
+    padding: 5px;
+}
+
+.miAcordion__btn{
+    font-size: 8px;
+    padding: 10px;
+}
+
+.miAcordion__item{
+     font-size: 8px; 
+     text-align: justify;
+}
+
+
+.verificacion {
+    padding: 0 10px;
+}
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+}
+        
+                    /*TABLET*/
+
+@media screen and (max-width: 768px){
+
+    /*HEADER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
+.servicios .tituloLimpieza{
+    margin: 15px;
+    font-size: 18px;
+}
+
+.servicios h1{
+    margin: 7px;
+    font-size: 18px;
+}
+
+.servicios p{
+    font-size: 12px;
+}
+
+.limpieza {
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.miAcordion{
+    width: 80%;
+    height: auto;
+    padding: 15px;
+}
+
+.miAcordion__btn{
+    font-size: 12px;
+    padding: 13px;
+}
+
+.miAcordion__item{
+     font-size: 11px; 
+     text-align: justify;
+}
+
+
+.verificacion {
+    padding: 0 15px;
+}
+
+    /*FOOTER YA ESTA DEFINIDO EN LA @MEDIA DEL INDEX*/
+
 }
