@@ -1,0 +1,177 @@
+/*----------------------------------------------------------------------------------------------------------*/
+/* HEADER Y FOOTER - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
+        
+        /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .header{
+        flex-direction: column;
+        flex-wrap: wrap;
+        .miNav{
+            .navHome{
+                font-size: 6px !important;
+            }
+            .menu li a{
+                font-size: 6px !important;
+            }
+        }
+        .imgHeader{
+            width: 80px;
+            height: 40px;
+        }
+    } 
+
+    .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 10px;
+        h4{
+            font-size: 8px;
+        }
+        img{
+            width: 55px;
+            height: 15px; 
+        }
+        .redes img{
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+}
+
+    /*  TABLET  */
+
+@media screen and (max-width: 768px){
+
+    .header{
+        font-size: 13px;
+        .miNav{
+            .navHome{
+                font-size: 13px !important;
+            }
+            .menu li a{
+                font-size: 13px !important;
+            }
+        }
+        .imgHeader{
+            width: 120px;
+            height: 60px;
+        }
+    }
+
+    .footer{
+        font-size: 13px;
+        justify-content:space-between;
+        align-items: center;
+
+        h4{
+            font-size: 13px;
+        }
+        img{
+            width: 100px;
+            height: 35px;  
+        }
+        .redes img{
+            width: 24px;
+            height: 24px;
+        }
+    }    
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* INDEX - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
+
+        /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .presentacion{
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+
+    .novedades{
+        flex-wrap: wrap;
+        ul{
+            align-items: center;
+            li a{
+                font-size: 10px;
+            }
+        }
+        a{
+            font-size: 10px;
+            text-align: center;
+        }
+        h2{
+            font-size: 10px;
+            text-align: center;
+        }
+        h3{
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+
+
+    .video{
+        flex-direction: column;
+        flex-wrap: wrap; 
+        iframe{
+            width: 90px;
+            height: 53px;
+        }
+        p{
+            font-size: 10px;
+            width: 100px;
+        }
+    }
+}
+
+    /*  TABLET  */
+
+@media screen and (max-width: 768px){
+
+    .presentacion{
+        font-size: 13px;
+    }
+
+    .novedades{
+        flex-wrap: wrap;
+        ul{
+            align-items: center;
+            li a{
+                font-size: 13px
+            }
+        }
+        a{
+            font-size: 13px;
+            text-align: center;
+        }
+        h2{
+            font-size: 13px;
+            text-align: center;
+        }
+        h3{
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+
+
+    .video{
+        flex-wrap: wrap; 
+        iframe{
+            width: 90px;
+            height: 53px;
+        }
+        p{
+            font-size: 13px;
+            width: 200px;
+        }
+    }
+
+}

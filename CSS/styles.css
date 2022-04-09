@@ -209,10 +209,6 @@ html{
 }
 
 .video p{
-    width: 400px;
-}
-
-.video p{
     padding-left: 10px;
     color: rgb(7, 7, 61);
     font-size: 16px;
@@ -642,6 +638,7 @@ body{
     height: 140px; 
     padding: 5px;
     transition: all 2s;
+    z-index: 0;
 }
 
 .carruselProductos:hover{

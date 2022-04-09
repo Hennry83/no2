@@ -1,15 +1,5 @@
-h1{
-    color:red;
-}
-
-h2{
-    color: blue;
-}
-
-header{
-    background-color: aqua;
-}
-
-main{
-    background-color: violet;
-}
+@import "generales";
+@import "header";
+@import "index";
+@import "footer";
+@import "mediaq";

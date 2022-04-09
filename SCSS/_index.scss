@@ -1,0 +1,131 @@
+/*--------------------------------------------------------------*/
+        /*  STYLES INDEX  */
+/*--------------------------------------------------------------*/
+
+/* PRESENTACION */
+
+.presentacion{
+    background-color: #414833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: presentacion;
+    .miCarrusel{
+        width: 40%;
+        height: auto; 
+        transition: all 2s; 
+        filter: grayscale(100%);
+        img{
+            border-radius: 1%;
+        }
+        &:hover{
+            filter: none;
+            transform: scale(1.4);
+        }
+    }
+    p{
+        width: 80vw;
+        height: 30vh;
+        color: lightcoral;
+        border: 3px solid whitesmoke;
+        font-family: MuseoModerno;
+        overflow:scroll;
+        margin: 15px 0;
+    } 
+}
+
+/* NOVEDADES */
+
+.novedades{
+    background-color: #414833;
+    background-image: linear-gradient(to left,#778162, #414833 );
+    display: flex;
+    flex-direction: column;
+    grid-area: novedades;
+    justify-content: space-evenly;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        li{
+            list-style-type:none;
+            a{
+                text-decoration: none;
+                color: lightgrey;
+                font-family: MuseoModerno;
+                padding: 5px;
+                font-size: 25px;
+                text-align: justify;
+                transition: all 1s;
+                &:hover {
+                    font-size: 30px;
+                    color: rgb(162, 165, 14);
+                }
+            }
+        }
+    }
+    h2{
+        font-family: MuseoModerno;    
+        color: lightgray;
+        margin: 5px;
+        padding: 5px;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 1.7;
+        transition: all 1s;
+        &:hover{
+            color: rgb(162, 165, 14);
+            font-size: 20px;
+        }
+    }
+    h3{
+        color: lightcoral;
+        font-family: MuseoModerno;
+        padding: 5px;
+        font-size: 20px;
+        text-align: justify;
+        line-height: 1.7;
+        transition: all 1s;
+        &:hover{
+            font-size: 22px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: yellow;
+        font-family: MuseoModerno;
+        padding: 5px;
+        font-size: 20px;
+        text-align: justify;
+    } 
+} 
+
+/*VIDEOS */
+
+.video{
+    background-color: #414833;
+    background-image: linear-gradient(to left, #414833 , #778162);
+    color: #a4ac86;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    grid-area: video;
+    flex-wrap: wrap;
+    iframe{
+        margin: 5px;
+        width: 200px;
+        height: 120px;
+    }
+    p{
+        padding-left: 10px;
+        color: rgb(7, 7, 61);
+        font-size: 16px;
+        /* width: 250px; */
+        transition: all 1s;
+        &:hover{
+            color: rgb(162, 165, 14);
+            font-size: 20px;
+        }    
+    }
+}

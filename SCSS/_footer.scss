@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------*/
+                    /*  FOOTER ALL PAGES  */
+/*--------------------------------------------------------------*/
+
+.footer{
+    border-top: 2px solid lightslategray;
+    color: lightgray;   
+    font-family: MuseoModerno;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: end;
+    grid-area: footer;
+    background-image: linear-gradient(to top, #414833 , #778162);
+    margin-bottom: 10px;
+    img{
+        width: 100px;
+        height: 55px; 
+        display: inline-block;
+        margin: 10px 0 0 10px;
+    }
+    h4 {
+        transition: all 1s;
+        &:hover {
+            color: rgb(162, 165, 14);
+        }
+    }
+    .redes img{
+        width: 32px;
+        height: 32px;
+        .imgFace:hover{
+            background-color:coral;
+            border-radius: 50%; 
+        }
+        .imgInsta:hover{
+            background-color:coral;
+            border-radius: 40%; 
+        }
+    }
+
+}
