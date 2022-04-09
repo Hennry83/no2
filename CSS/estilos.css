@@ -168,7 +168,7 @@ html {
   align-items: end;
   grid-area: footer;
   background-image: linear-gradient(to top, #414833, #778162);
-  margin-bottom: 10px; }
+  padding-bottom: 15px; }
   .footer img {
     width: 100px;
     height: 55px;
@@ -181,12 +181,12 @@ html {
   .footer .redes img {
     width: 32px;
     height: 32px; }
-    .footer .redes img .imgFace:hover {
-      background-color: coral;
-      border-radius: 50%; }
-    .footer .redes img .imgInsta:hover {
-      background-color: coral;
-      border-radius: 40%; }
+  .footer .redes .imgFace:hover {
+    background-color: coral;
+    border-radius: 50%; }
+  .footer .redes .imgInsta:hover {
+    background-color: coral;
+    border-radius: 40%; }
 
 /*----------------------------------------------------------------------------------------------------------*/
 /* HEADER Y FOOTER - @MEDIA */

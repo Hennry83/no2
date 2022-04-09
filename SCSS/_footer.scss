@@ -12,7 +12,7 @@
     align-items: end;
     grid-area: footer;
     background-image: linear-gradient(to top, #414833 , #778162);
-    margin-bottom: 10px;
+    padding-bottom: 15px;
     img{
         width: 100px;
         height: 55px; 
@@ -25,9 +25,11 @@
             color: rgb(162, 165, 14);
         }
     }
-    .redes img{
-        width: 32px;
-        height: 32px;
+    .redes{
+        img{
+            width: 32px;
+            height: 32px;
+        }
         .imgFace:hover{
             background-color:coral;
             border-radius: 50%; 
@@ -35,7 +37,7 @@
         .imgInsta:hover{
             background-color:coral;
             border-radius: 40%; 
-        }
+        }        
     }
 
 }
