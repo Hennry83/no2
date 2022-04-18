@@ -1,0 +1,75 @@
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - SERVICIOS  */
+/*--------------------------------------------------------------*/
+
+.servicios {
+    font-family: $fuente;
+    color: $colorSecundario;
+    background-color: $colorPrincipal;
+    text-align: center;
+    .tituloLimpieza{
+        text-align: center;
+        margin: 10px;
+        transition: all 1s;
+    }
+    h1{
+        text-align:start;
+        margin: 10px;
+        transition: all 1s;
+        background-image: linear-gradient(to right,$colorPrincipal, $gradienteClaro);
+        &:hover{
+            color: $colorTerciario;
+        }
+    }
+    .limpieza {
+        @include flex(flex,column,nowrap);
+        text-align: justify; 
+        margin-bottom: 15px;
+        border-bottom: 2px dotted $lineaPuntos;
+        padding: 0 20px;
+        background-image: linear-gradient(to top,$colorPrincipal, $gradienteClaro);
+        span{
+            color: $colorTerciario;
+        }
+    }
+    .preguntas {
+        border-bottom: 2px dotted $lineaPuntos;  
+        display: flex; 
+        background-image: linear-gradient(to top,$colorPrincipal, $gradienteClaro);
+        .miAcordion{
+            width: 70%;
+            height: auto;
+            padding: 10px;
+            .miAcordion__item{
+                font-family: $fuente;
+                color: $colorTerciario;
+                background-color: $colorPrincipal;
+                font-size: 16px; 
+                text-align: justify;
+                .miAcordion__btn{
+                    font-family: $fuente;
+                    color: coral;
+                    font-size: 16px; 
+                    background-color: $gradienteClaro;
+                    height: 10px;
+                    padding: 15px;
+                }
+                .miAcordion__btn:focus{
+                    background-color: lightcoral;
+                    color: darkblue;
+                } 
+            }
+        }
+    }
+}
+
+
+.verificacion {
+    display: flex;
+    text-align: justify;
+    padding: 0 20px;
+    background-image: linear-gradient(to top,$colorPrincipal, $gradienteClaro);
+    span{
+        color: darkblue;
+    }
+}

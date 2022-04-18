@@ -1,0 +1,7 @@
+@mixin flex($display, $direction, $wrap) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+ }
+ 
+ 

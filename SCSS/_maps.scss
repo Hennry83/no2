@@ -1,0 +1,35 @@
+    /* MAPS-GET() ESTILOS GENERALES */
+
+ $estilosGenerales: (
+  colorFondo: $colorPrincipal,
+  colorFuente: $colorSecundario,
+  fuente:MuseoModerno,
+  centro: center,
+  sizeFuente: 16px,
+);
+
+.presentacion{
+    background-color: map-get($estilosGenerales, colorFondo);
+    align-items: map-get($estilosGenerales, centro);
+    p{
+        color: map-get($estilosGenerales, colorFuente);
+        font-family: map-get($estilosGenerales , fuente);
+        text-align:map-get($estilosGenerales , centro);
+    }
+}
+
+
+        /* MAPS REDES */
+
+/*Declaramos nuestro mapa*/
+$redes: (
+        facebook: $colorFace,
+        instagram: $colorInsta
+); 
+
+/*Creamos el bucle para usar los valores del mapa*/
+ @each $red, $color in $redes {
+   .#{$red}:hover {
+       background-color: $color;
+   }
+} 

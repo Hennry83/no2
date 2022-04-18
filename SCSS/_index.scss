@@ -5,11 +5,7 @@
 /* PRESENTACION */
 
 .presentacion{
-    background-color: #414833;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: presentacion;
+    @include flex(flex,column, nowrap);
     .miCarrusel{
         width: 40%;
         height: auto; 
@@ -26,47 +22,40 @@
     p{
         width: 80vw;
         height: 30vh;
-        color: lightcoral;
-        border: 3px solid whitesmoke;
-        font-family: MuseoModerno;
-        overflow:scroll;
-        margin: 15px 0;
+        margin: 15px 0;        
     } 
 }
 
 /* NOVEDADES */
 
 .novedades{
-    background-color: #414833;
-    background-image: linear-gradient(to left,#778162, #414833 );
-    display: flex;
-    flex-direction: column;
-    grid-area: novedades;
+    background-color: $colorPrincipal;
+    background-image: linear-gradient(to left, $gradienteClaro, $colorPrincipal );
+    @include flex(flex,column, nowrap);
     justify-content: space-evenly;
     ul{
-        display: flex;
-        flex-direction: column;
+        @include flex(flex,column,nowrap);
         align-items: flex-start;
         li{
             list-style-type:none;
             a{
                 text-decoration: none;
-                color: lightgrey;
-                font-family: MuseoModerno;
+                color: $colorSecundario;
+                font-family: $fuente;
                 padding: 5px;
                 font-size: 25px;
                 text-align: justify;
                 transition: all 1s;
                 &:hover {
                     font-size: 30px;
-                    color: rgb(162, 165, 14);
+                    color: $colorTerciario;
                 }
             }
         }
     }
     h2{
-        font-family: MuseoModerno;    
-        color: lightgray;
+        font-family: $fuente;    
+        color: $colorSecundario;
         margin: 5px;
         padding: 5px;
         font-size: 15px;
@@ -74,13 +63,13 @@
         line-height: 1.7;
         transition: all 1s;
         &:hover{
-            color: rgb(162, 165, 14);
+            color: $colorTerciario;
             font-size: 20px;
         }
     }
     h3{
         color: lightcoral;
-        font-family: MuseoModerno;
+        font-family: $fuente;
         padding: 5px;
         font-size: 20px;
         text-align: justify;
@@ -92,8 +81,8 @@
     }
     a{
         text-decoration: none;
-        color: yellow;
-        font-family: MuseoModerno;
+        color: $colorTerciario;
+        font-family: $fuente;
         padding: 5px;
         font-size: 20px;
         text-align: justify;
@@ -103,19 +92,18 @@
 /*VIDEOS */
 
 .video{
-    background-color: #414833;
-    background-image: linear-gradient(to left, #414833 , #778162);
-    color: #a4ac86;
-    display: flex;
-    flex-direction: row-reverse;
+    background-color: $colorPrincipal;
+    background-image: linear-gradient(to left, $colorPrincipal , $gradienteClaro);
+    @include flex(flex,row-reverse,wrap);
     align-items: center;
     justify-content: center;
-    grid-area: video;
-    flex-wrap: wrap;
     iframe{
         margin: 5px;
         width: 200px;
         height: 120px;
+        &:hover{
+            border: solid 3px $colorTerciario;
+        }
     }
     p{
         padding-left: 10px;
@@ -124,7 +112,7 @@
         /* width: 250px; */
         transition: all 1s;
         &:hover{
-            color: rgb(162, 165, 14);
+            color: $colorTerciario;
             font-size: 20px;
         }    
     }

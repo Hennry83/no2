@@ -3,9 +3,8 @@
 /*--------------------------------------------------------------*/
 
 .header {
-    display: flex;
-    flex-direction: row; 
-    background-color: #414833;
+    @include flex(flex,row,nowrap);
+    background-color: #414833; 
     justify-content: space-between;
     align-items:center;   
     grid-area: header;

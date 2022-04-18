@@ -1,0 +1,65 @@
+/*--------------------------------------------------------------*/
+                    /*  STYLES MAIN - NOSOTROS  */
+/*--------------------------------------------------------------*/
+
+.reseña{
+    background-color: $colorPrincipal;
+    font-family: $fuente;
+    color: $colorSecundario;
+    @include flex(flex,column, nowrap);
+    h2{
+        margin-top: 10px;
+        padding: 5px;
+        text-align: center;
+        transition: all 1s;
+        &:hover{
+            color: $colorTerciario
+        }
+    }
+    p{
+        text-align:justify;
+        padding: 10px 90px 25px 90px;
+        transition: all 1s;
+        &:hover{
+            color: $colorTerciario
+        }
+    }
+}
+
+
+.contactoNosotros{
+    background-color: $colorPrincipal;
+    font-family: $fuente;
+    color: $colorSecundario;
+    border-bottom: 2px solid $lineaPuntos;
+    border-top: 2px solid $lineaPuntos;
+    @include flex(flex,row, nowrap);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ubicacion{
+    background-color: $colorPrincipal;
+    font-family: $fuente;
+    color: $colorSecundario;
+    @include flex(flex,row, nowrap);
+    align-items: center;
+    justify-content: space-around;
+    h3{
+        transition: all 1s;
+        &:hover{
+            color: $colorTerciario
+        }
+    }
+    p{
+        transition: all 1s;
+        &:hover{
+            color: $colorTerciario
+        }
+    }
+    iframe{
+        width: 300px;
+        height: 200px;
+        margin: 10px 0;
+    }
+}

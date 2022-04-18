@@ -121,8 +121,8 @@
         flex-direction: column;
         flex-wrap: wrap; 
         iframe{
-            width: 90px;
-            height: 53px;
+            width: 100%;
+            height: 70%;
         }
         p{
             font-size: 10px;
@@ -163,10 +163,9 @@
 
 
     .video{
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         iframe{
-            width: 90px;
-            height: 53px;
+            width: 100%;
         }
         p{
             font-size: 13px;
