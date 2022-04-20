@@ -39,15 +39,15 @@
         .miAcordion{
             width: 70%;
             height: auto;
-            padding: 10px;
+            padding: 5px;
             .miAcordion__item{
-                font-family: $fuente;
+                /* font-family: $fuente; */
                 color: $colorTerciario;
                 background-color: $colorPrincipal;
                 font-size: 16px; 
                 text-align: justify;
                 .miAcordion__btn{
-                    font-family: $fuente;
+                    /* font-family: $fuente; */
                     color: coral;
                     font-size: 16px; 
                     background-color: $gradienteClaro;

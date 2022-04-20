@@ -1,46 +1,6 @@
 /*----------------------------------------------------------------------------------------------------------*/
 /* HEADER Y FOOTER - @MEDIA */
 /*----------------------------------------------------------------------------------------------------------*/
-        
-        /*  MOBILE  */
-
-@media screen and (max-width: 480px){
-
-    .header{
-        flex-direction: column;
-        flex-wrap: wrap;
-        .miNav{
-            .navHome{
-                font-size: 6px !important;
-            }
-            .menu li a{
-                font-size: 6px !important;
-            }
-        }
-        .imgHeader{
-            width: 80px;
-            height: 40px;
-        }
-    } 
-
-    .footer{
-        flex-direction: column;
-        flex-wrap: wrap;
-        font-size: 10px;
-        h4{
-            font-size: 8px;
-        }
-        img{
-            width: 55px;
-            height: 15px; 
-        }
-        .redes img{
-            width: 16px;
-            height: 16px;
-        }
-    }
-
-}
 
     /*  TABLET  */
 
@@ -63,9 +23,8 @@
     }
 
     .footer{
-        font-size: 13px;
         justify-content:space-between;
-        align-items: center;
+        align-items:flex-end;
 
         h4{
             font-size: 13px;
@@ -81,55 +40,51 @@
     }    
 }
 
-/*----------------------------------------------------------------------------------------------------------*/
-/* INDEX - @MEDIA */
-/*----------------------------------------------------------------------------------------------------------*/
-
         /*  MOBILE  */
 
 @media screen and (max-width: 480px){
 
-    .presentacion{
-        font-size: 10px;
-        flex-wrap: wrap;
-    }
-
-    .novedades{
-        flex-wrap: wrap;
-        ul{
-            align-items: center;
-            li a{
-                font-size: 10px;
+    .header{
+        @include flex(flex,column, wrap);
+        .miNav{
+            .navHome{
+                font-size: 10px !important;
+            }
+            .menu li a{
+                font-size: 10px !important;
             }
         }
-        a{
-            font-size: 10px;
-            text-align: center;
+        .imgHeader{
+            width: 80px;
+            height: 40px;
         }
-        h2{
-            font-size: 10px;
-            text-align: center;
+    } 
+
+    .footer{
+        @include flex(flex,column, wrap);
+        font-size: 10px;
+        align-items:center;
+        
+        h4{
+            font-size: 13px;
         }
-        h3{
-            font-size: 10px;
-            text-align: center;
+        img{
+            width: 95px;
+            height: 40px; 
+            margin-bottom: 10px;
+        }
+        .redes img{
+            width: 20px;
+            height: 20px;
         }
     }
 
-
-    .video{
-        flex-direction: column;
-        flex-wrap: wrap; 
-        iframe{
-            width: 100%;
-            height: 70%;
-        }
-        p{
-            font-size: 10px;
-            width: 100px;
-        }
-    }
 }
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+/*      INDEX - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
 
     /*  TABLET  */
 
@@ -169,8 +124,660 @@
         }
         p{
             font-size: 13px;
-            width: 200px;
+            width: 100%;
         }
     }
 
 }
+
+        /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .presentacion{
+        font-size: 10px;
+        flex-wrap: wrap;
+        p{
+            font-size: 10px;
+            overflow: scroll;
+        }
+    }
+
+    .novedades{
+        flex-wrap: wrap;
+        ul{
+            align-items: center;
+            padding-left: 0;
+            li{
+                list-style-type:none;
+                a{
+                    font-size: 10px;
+                }
+            }
+        }
+        h2{
+            text-align: center;
+            font-size: 10px;
+            &:hover{
+                font-size: 14px;
+            }
+        }
+        h3{
+            text-align: center;
+            font-size: 10px;
+            &:hover{
+                font-size: 11px;
+            }
+        }
+        a{
+            font-size: 10px;
+            text-align: center;
+        } 
+    }
+
+    .video{
+        flex-direction: column;
+        flex-wrap: wrap;
+        iframe{
+            width: 100%;
+            height: 70%;
+        }
+        p{
+            font-size: 10px;
+            width: 100%;
+            transition: all 1s;
+            &:hover{
+                font-size: 14px;
+            }    
+        }
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+        /* NOSOTROS - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
+
+        /*  TABLET  */
+
+@media screen and (max-width: 768px){
+
+    .reseña{
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 18px;
+            @include flex(flex,row, wrap);
+            justify-content: center;
+        }
+        p{
+            font-size: 14px;
+            @include flex(flex,row, wrap);
+            justify-content: center;
+        }
+    }
+
+    .contactoNosotros{
+        justify-content: center;
+        font-size: 14px;
+        h3{
+            font-size: 12px;
+        }
+        h5{
+            font-size: 12px;
+        }
+    }
+
+    .ubicacion {
+        align-items: center;
+        h3{    
+            font-size: 18px;
+        }
+        p{    
+            font-size: 13px;
+        }
+        iframe{
+            width: 215px;
+            height: 120px;
+            margin: 10px 0;
+        }
+    }
+} 
+
+        /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .reseña{
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 13px;
+            @include flex(flex,row, wrap);
+            justify-content: center;
+        }
+        p{  
+            font-size: 10px;
+            height: 250px; 
+            overflow:scroll;
+        }
+    }
+
+    .contactoNosotros{
+        flex-direction: column;
+        justify-content: center;
+        h3{
+            font-size: 10px;
+        }
+        h5{
+            font-size: 10px;
+        }
+    }
+
+    .ubicacion {
+        flex-direction: column;
+        justify-content: center;
+        h3{    
+            font-size: 13px;
+        }
+        p{    
+            font-size: 10px;
+        }
+        iframe{
+            width: 200px;
+            height: 100px;
+            margin: 5px 0;
+        }
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+            /* CONTACTO - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+
+        /*  TABLET  */
+
+@media screen and (max-width: 768px){
+
+    .contacto{
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-size: 18px;
+        }
+        h2{
+            font-size: 18px;
+        }
+    }
+
+    .formulario__contenido{
+        font-size: 14px;
+        input:focus {
+            width: 55%;
+            font-size: 18px;
+        }
+    }
+
+    .chkboxForm input{
+        margin-left: 10px;
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .btnFormContacto--aceptar {
+        font-size: 9px;
+        margin-left: 10%;
+    }
+
+    .btnFormContacto--cancelar {
+        font-size: 9px;
+        margin-left: 10%;
+    }
+
+    .mapaForm { 
+        @include flex(flex,row, nowrap);
+        justify-content: center;
+        iframe{
+            width: 280px;
+            height: 150px;
+        }
+    }
+
+    .imgForm {
+        @include flex(flex,row, nowrap);
+        justify-content: center;
+    }
+    
+    .carruselContacto {
+        width: 290px;
+        height: auto;
+    }
+}
+
+    /*  MOBILE  */
+
+@media screen and (max-width: 480px){
+
+    .contacto{
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-size: 14px;
+        }
+        h2{
+            font-size: 12px;
+        }
+    }
+
+    .formulario {
+        padding-left: 0;
+        .formulario__contenido{
+            font-size: 10px; 
+            input{
+                &:focus{
+                    width: 25%;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .chkboxForm {
+        input{
+            margin-left: 5px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .btnFormContacto--aceptar {
+        font-family: MuseoModerno;
+        color: rgb(3, 3, 51);
+        font-size: 10px;
+        background-color: lightblue;
+        margin-left: 5%;
+    }
+
+    .btnFormContacto--cancelar {
+        font-family: MuseoModerno;
+        color: rgb(3, 3, 51);
+        font-size: 10px;
+        background-color: lightcoral;
+        margin-left: 5%;
+    }
+
+
+    .mapaForm { 
+        @include flex(flex,row, nowrap);
+        justify-content: center;
+        iframe{
+            width: 215px;
+            height: 120px;
+        }
+    }
+
+    .imgForm {
+        @include flex(flex,row, nowrap);
+        justify-content: center;
+    }
+
+    .carruselContacto {
+        width: 230px;
+        height: auto;
+    }
+}         
+
+/*---------------------------------------------------------------------------------------------------------*/
+            /* PRODUCTOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/                    
+        
+                    /*TABLET*/
+
+@media screen and (max-width: 768px){
+
+    .titulo{
+        font-size: 18px;
+    }
+
+    .catalogo{
+        padding: 0 10px;
+        h2{
+            margin: 5px;
+            font-size: 18px;
+        }
+        h4{
+            margin: 5px 5px 0 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        p{
+            margin: 5px 5px 0 5px;
+            text-align: justify;
+            font-size: 12px;
+        }
+    }
+
+    .catalogo h2{
+    margin: 5px;
+    font-size: 18px;
+    }
+
+    .cocinas {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }    
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }    
+    }
+
+    .dormitorios {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+    }
+
+    .livings {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+    }
+
+    .escritorios {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+    }
+
+    .exterior {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+    }
+
+    .racks {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+    }
+
+    .qubos {
+        img{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }
+        iframe{
+            width: 140px;
+            height: 90px;
+            padding: 3px;
+        }        
+    }
+}
+
+            /*MOBILE*/
+
+@media screen and (max-width: 480px){
+
+    .titulo{
+        font-size: 15px;
+    }
+
+    .catalogo{
+        padding: 0 10px;
+        h2{
+            margin: 5px;
+            font-size: 12px;
+        }
+        h4{
+            margin: 5px 5px 0 5px;
+            text-align: center;
+            font-size: 10px;
+        }
+        p{
+            margin: 5px 5px 0 5px;
+            text-align: justify;
+            font-size: 10px;
+        }
+    }
+
+    .cocinas {
+        img{
+            width: 100px;
+            height: 75px;  
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+            }
+
+    }
+
+    .dormitorios{
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+
+
+    .livings {
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+
+    .escritorios {
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+
+    .exterior {
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+
+    .racks {
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+
+    .qubos img{
+        img{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+        iframe{
+            width: 100px;
+            height: 75px;
+            padding: 2px;
+        }
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+            /* SERVICIOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+        
+                    /*TABLET*/
+
+@media screen and (max-width: 768px){
+
+    .servicios {
+        .tituloLimpieza{
+            margin: 15px;
+            font-size: 18px;
+        }
+        .limpieza {
+            margin-bottom: 10px;
+            padding: 0 15px;
+            p{
+                font-size: 11px;
+            }
+            h5{
+                margin: 5px; 
+                font-size: 14px;
+            }   
+            ul li{
+                font-size: 10px;
+            }
+        }
+        h1{
+            margin: 7px;
+            font-size: 18px;
+        }
+        .preguntas{
+            .miAcordion{
+                width: 80%;
+                height: auto;
+                padding: 15px;
+                .miAcordion__item{
+                    font-size: 12px; 
+                    text-align: justify;
+                    .miAcordion__btn{
+                        font-size: 12px; 
+                        padding: 13px;
+                    }
+                }
+            }
+        }
+
+        .verificacion {
+            padding: 0 10px;
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+            /*MOBILE*/
+@media screen and (max-width: 480px){
+
+    .servicios {
+        .tituloLimpieza{
+            margin: 10px;
+            font-size: 13px;
+        }
+        .limpieza {
+            margin-bottom: 7px;
+            padding: 0 10px;
+            p{
+                font-size: 10px;
+                padding-left: 5px;
+            }
+            h5{
+                margin: 5px; 
+                font-size: 12px;
+            }   
+            ul li{
+                font-size: 10px;
+            }
+        }
+        h1{
+            margin: 5px;
+            font-size: 14px;
+        }
+        .preguntas{
+            .miAcordion{
+                width: 70%;
+                height: auto;
+                .miAcordion__item{
+                    font-size: 10px; 
+                    text-align: justify;
+                    .miAcordion__btn{
+                        font-size: 10px; 
+                    }
+                }
+            }
+        }
+
+        .verificacion {
+            padding: 0 10px;
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+}
+                        

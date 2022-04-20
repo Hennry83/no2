@@ -16,7 +16,7 @@
             color: $colorTerciario
         }
     }
-    p{
+    p{  
         text-align:justify;
         padding: 10px 90px 25px 90px;
         transition: all 1s;
@@ -36,6 +36,9 @@
     @include flex(flex,row, nowrap);
     justify-content: space-around;
     align-items: center;
+    h3{
+        font-size: 20px;
+    }
 }
 
 .ubicacion{

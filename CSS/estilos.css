@@ -115,7 +115,8 @@ html {
   .presentacion p {
     width: 80vw;
     height: 30vh;
-    margin: 15px 0; }
+    margin: 15px 0;
+    font-family: MuseoModerno; }
 
 /* NOVEDADES */
 .novedades {
@@ -129,19 +130,19 @@ html {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding-left: 0; }
     .novedades ul li {
       list-style-type: none; }
       .novedades ul li a {
         text-decoration: none;
         color: lightgrey;
         font-family: MuseoModerno;
-        padding: 5px;
-        font-size: 25px;
+        font-size: 20px;
         text-align: justify;
         transition: all 1s; }
         .novedades ul li a:hover {
-          font-size: 30px;
+          font-size: 25px;
           color: #a2a50e; }
   .novedades h2 {
     font-family: MuseoModerno;
@@ -193,7 +194,8 @@ html {
     color: #07073d;
     font-size: 16px;
     /* width: 250px; */
-    transition: all 1s; }
+    transition: all 1s;
+    font-family: MuseoModerno; }
     .video p:hover {
       color: #a2a50e;
       font-size: 20px; }
@@ -233,6 +235,8 @@ html {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center; }
+  .contactoNosotros h3 {
+    font-size: 20px; }
 
 .ubicacion {
   background-color: #414833;
@@ -527,15 +531,15 @@ body {
     .servicios .preguntas .miAcordion {
       width: 70%;
       height: auto;
-      padding: 10px; }
+      padding: 5px; }
       .servicios .preguntas .miAcordion .miAcordion__item {
-        font-family: MuseoModerno;
+        /* font-family: $fuente; */
         color: #a2a50e;
         background-color: #414833;
         font-size: 16px;
         text-align: justify; }
         .servicios .preguntas .miAcordion .miAcordion__item .miAcordion__btn {
-          font-family: MuseoModerno;
+          /* font-family: $fuente; */
           color: coral;
           font-size: 16px;
           background-color: #778162;
@@ -587,31 +591,6 @@ body {
 /*----------------------------------------------------------------------------------------------------------*/
 /* HEADER Y FOOTER - @MEDIA */
 /*----------------------------------------------------------------------------------------------------------*/
-/*  MOBILE  */
-@media screen and (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    flex-wrap: wrap; }
-    .header .miNav .navHome {
-      font-size: 6px !important; }
-    .header .miNav .menu li a {
-      font-size: 6px !important; }
-    .header .imgHeader {
-      width: 80px;
-      height: 40px; }
-  .footer {
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 10px; }
-    .footer h4 {
-      font-size: 8px; }
-    .footer img {
-      width: 55px;
-      height: 15px; }
-    .footer .redes img {
-      width: 16px;
-      height: 16px; } }
-
 /*  TABLET  */
 @media screen and (max-width: 768px) {
   .header {
@@ -624,9 +603,8 @@ body {
       width: 120px;
       height: 60px; }
   .footer {
-    font-size: 13px;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-end; }
     .footer h4 {
       font-size: 13px; }
     .footer img {
@@ -636,39 +614,38 @@ body {
       width: 24px;
       height: 24px; } }
 
-/*----------------------------------------------------------------------------------------------------------*/
-/* INDEX - @MEDIA */
-/*----------------------------------------------------------------------------------------------------------*/
 /*  MOBILE  */
 @media screen and (max-width: 480px) {
-  .presentacion {
-    font-size: 10px;
-    flex-wrap: wrap; }
-  .novedades {
-    flex-wrap: wrap; }
-    .novedades ul {
-      align-items: center; }
-      .novedades ul li a {
-        font-size: 10px; }
-    .novedades a {
-      font-size: 10px;
-      text-align: center; }
-    .novedades h2 {
-      font-size: 10px;
-      text-align: center; }
-    .novedades h3 {
-      font-size: 10px;
-      text-align: center; }
-  .video {
+  .header {
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap; }
-    .video iframe {
-      width: 100%;
-      height: 70%; }
-    .video p {
-      font-size: 10px;
-      width: 100px; } }
+    .header .miNav .navHome {
+      font-size: 10px !important; }
+    .header .miNav .menu li a {
+      font-size: 10px !important; }
+    .header .imgHeader {
+      width: 80px;
+      height: 40px; }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 10px;
+    align-items: center; }
+    .footer h4 {
+      font-size: 13px; }
+    .footer img {
+      width: 95px;
+      height: 40px;
+      margin-bottom: 10px; }
+    .footer .redes img {
+      width: 20px;
+      height: 20px; } }
 
+/*----------------------------------------------------------------------------------------------------------*/
+/*      INDEX - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
 /*  TABLET  */
 @media screen and (max-width: 768px) {
   .presentacion {
@@ -694,4 +671,434 @@ body {
       width: 100%; }
     .video p {
       font-size: 13px;
-      width: 200px; } }
+      width: 100%; } }
+
+/*  MOBILE  */
+@media screen and (max-width: 480px) {
+  .presentacion {
+    font-size: 10px;
+    flex-wrap: wrap; }
+    .presentacion p {
+      font-size: 10px;
+      overflow: scroll; }
+  .novedades {
+    flex-wrap: wrap; }
+    .novedades ul {
+      align-items: center;
+      padding-left: 0; }
+      .novedades ul li {
+        list-style-type: none; }
+        .novedades ul li a {
+          font-size: 10px; }
+    .novedades h2 {
+      text-align: center;
+      font-size: 10px; }
+      .novedades h2:hover {
+        font-size: 14px; }
+    .novedades h3 {
+      text-align: center;
+      font-size: 10px; }
+      .novedades h3:hover {
+        font-size: 11px; }
+    .novedades a {
+      font-size: 10px;
+      text-align: center; }
+  .video {
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .video iframe {
+      width: 100%;
+      height: 70%; }
+    .video p {
+      font-size: 10px;
+      width: 100%;
+      transition: all 1s; }
+      .video p:hover {
+        font-size: 14px; } }
+
+/*---------------------------------------------------------------------------------------------------------*/
+/* NOSOTROS - @MEDIA */
+/*----------------------------------------------------------------------------------------------------------*/
+/*  TABLET  */
+@media screen and (max-width: 768px) {
+  .reseña {
+    justify-content: center;
+    align-items: center; }
+    .reseña h2 {
+      font-size: 18px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .reseña p {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+  .contactoNosotros {
+    justify-content: center;
+    font-size: 14px; }
+    .contactoNosotros h3 {
+      font-size: 12px; }
+    .contactoNosotros h5 {
+      font-size: 12px; }
+  .ubicacion {
+    align-items: center; }
+    .ubicacion h3 {
+      font-size: 18px; }
+    .ubicacion p {
+      font-size: 13px; }
+    .ubicacion iframe {
+      width: 215px;
+      height: 120px;
+      margin: 10px 0; } }
+
+/*  MOBILE  */
+@media screen and (max-width: 480px) {
+  .reseña {
+    justify-content: center;
+    align-items: center; }
+    .reseña h2 {
+      font-size: 13px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .reseña p {
+      font-size: 10px;
+      height: 250px;
+      overflow: scroll; }
+  .contactoNosotros {
+    flex-direction: column;
+    justify-content: center; }
+    .contactoNosotros h3 {
+      font-size: 10px; }
+    .contactoNosotros h5 {
+      font-size: 10px; }
+  .ubicacion {
+    flex-direction: column;
+    justify-content: center; }
+    .ubicacion h3 {
+      font-size: 13px; }
+    .ubicacion p {
+      font-size: 10px; }
+    .ubicacion iframe {
+      width: 200px;
+      height: 100px;
+      margin: 5px 0; } }
+
+/*---------------------------------------------------------------------------------------------------------*/
+/* CONTACTO - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+/*  TABLET  */
+@media screen and (max-width: 768px) {
+  .contacto {
+    flex-direction: column;
+    justify-content: center; }
+    .contacto h1 {
+      font-size: 18px; }
+    .contacto h2 {
+      font-size: 18px; }
+  .formulario__contenido {
+    font-size: 14px; }
+    .formulario__contenido input:focus {
+      width: 55%;
+      font-size: 18px; }
+  .chkboxForm input {
+    margin-left: 10px; }
+    .chkboxForm input p {
+      font-size: 14px; }
+  .btnFormContacto--aceptar {
+    font-size: 9px;
+    margin-left: 10%; }
+  .btnFormContacto--cancelar {
+    font-size: 9px;
+    margin-left: 10%; }
+  .mapaForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
+    .mapaForm iframe {
+      width: 280px;
+      height: 150px; }
+  .imgForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
+  .carruselContacto {
+    width: 290px;
+    height: auto; } }
+
+/*  MOBILE  */
+@media screen and (max-width: 480px) {
+  .contacto {
+    flex-direction: column;
+    justify-content: center; }
+    .contacto h1 {
+      font-size: 14px; }
+    .contacto h2 {
+      font-size: 12px; }
+  .formulario {
+    padding-left: 0; }
+    .formulario .formulario__contenido {
+      font-size: 10px; }
+      .formulario .formulario__contenido input:focus {
+        width: 25%;
+        font-size: 10px; }
+  .chkboxForm input {
+    margin-left: 5px; }
+  .chkboxForm p {
+    font-size: 10px; }
+  .btnFormContacto--aceptar {
+    font-family: MuseoModerno;
+    color: #030333;
+    font-size: 10px;
+    background-color: lightblue;
+    margin-left: 5%; }
+  .btnFormContacto--cancelar {
+    font-family: MuseoModerno;
+    color: #030333;
+    font-size: 10px;
+    background-color: lightcoral;
+    margin-left: 5%; }
+  .mapaForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
+    .mapaForm iframe {
+      width: 215px;
+      height: 120px; }
+  .imgForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; }
+  .carruselContacto {
+    width: 230px;
+    height: auto; } }
+
+/*---------------------------------------------------------------------------------------------------------*/
+/* PRODUCTOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+/*TABLET*/
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 18px; }
+  .catalogo {
+    padding: 0 10px; }
+    .catalogo h2 {
+      margin: 5px;
+      font-size: 18px; }
+    .catalogo h4 {
+      margin: 5px 5px 0 5px;
+      text-align: center;
+      font-size: 14px; }
+    .catalogo p {
+      margin: 5px 5px 0 5px;
+      text-align: justify;
+      font-size: 12px; }
+  .catalogo h2 {
+    margin: 5px;
+    font-size: 18px; }
+  .cocinas img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .cocinas iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .dormitorios img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .dormitorios iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .livings img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .livings iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .escritorios img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .escritorios iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .exterior img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .exterior iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .racks img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .racks iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .qubos img {
+    width: 140px;
+    height: 90px;
+    padding: 3px; }
+  .qubos iframe {
+    width: 140px;
+    height: 90px;
+    padding: 3px; } }
+
+/*MOBILE*/
+@media screen and (max-width: 480px) {
+  .titulo {
+    font-size: 15px; }
+  .catalogo {
+    padding: 0 10px; }
+    .catalogo h2 {
+      margin: 5px;
+      font-size: 12px; }
+    .catalogo h4 {
+      margin: 5px 5px 0 5px;
+      text-align: center;
+      font-size: 10px; }
+    .catalogo p {
+      margin: 5px 5px 0 5px;
+      text-align: justify;
+      font-size: 10px; }
+  .cocinas img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .cocinas iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .dormitorios img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .dormitorios iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .livings img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .livings iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .escritorios img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .escritorios iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .exterior img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .exterior iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .racks img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .racks iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .qubos img img {
+    width: 100px;
+    height: 75px;
+    padding: 2px; }
+  .qubos img iframe {
+    width: 100px;
+    height: 75px;
+    padding: 2px; } }
+
+/*---------------------------------------------------------------------------------------------------------*/
+/* SERVICIOS - @MEDIA */
+/*---------------------------------------------------------------------------------------------------------*/
+/*TABLET*/
+@media screen and (max-width: 768px) {
+  .servicios .tituloLimpieza {
+    margin: 15px;
+    font-size: 18px; }
+  .servicios .limpieza {
+    margin-bottom: 10px;
+    padding: 0 15px; }
+    .servicios .limpieza p {
+      font-size: 11px; }
+    .servicios .limpieza h5 {
+      margin: 5px;
+      font-size: 14px; }
+    .servicios .limpieza ul li {
+      font-size: 10px; }
+  .servicios h1 {
+    margin: 7px;
+    font-size: 18px; }
+  .servicios .preguntas .miAcordion {
+    width: 80%;
+    height: auto;
+    padding: 15px; }
+    .servicios .preguntas .miAcordion .miAcordion__item {
+      font-size: 12px;
+      text-align: justify; }
+      .servicios .preguntas .miAcordion .miAcordion__item .miAcordion__btn {
+        font-size: 12px;
+        padding: 13px; }
+  .servicios .verificacion {
+    padding: 0 10px; }
+    .servicios .verificacion p {
+      font-size: 10px; } }
+
+/*MOBILE*/
+@media screen and (max-width: 480px) {
+  .servicios .tituloLimpieza {
+    margin: 10px;
+    font-size: 13px; }
+  .servicios .limpieza {
+    margin-bottom: 7px;
+    padding: 0 10px; }
+    .servicios .limpieza p {
+      font-size: 10px;
+      padding-left: 5px; }
+    .servicios .limpieza h5 {
+      margin: 5px;
+      font-size: 12px; }
+    .servicios .limpieza ul li {
+      font-size: 10px; }
+  .servicios h1 {
+    margin: 5px;
+    font-size: 14px; }
+  .servicios .preguntas .miAcordion {
+    width: 70%;
+    height: auto; }
+    .servicios .preguntas .miAcordion .miAcordion__item {
+      font-size: 10px;
+      text-align: justify; }
+      .servicios .preguntas .miAcordion .miAcordion__item .miAcordion__btn {
+        font-size: 10px; }
+  .servicios .verificacion {
+    padding: 0 10px; }
+    .servicios .verificacion p {
+      font-size: 10px; } }
