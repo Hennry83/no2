@@ -4,41 +4,50 @@
 
 .header {
     @include flex(flex,row,nowrap);
-    background-color: #414833; 
+    background-color: $colorPrincipal; 
     justify-content: space-between;
     align-items:center;   
     grid-area: header;
-    background-image: linear-gradient(to top, #414833 , #778162);
+    background-image: linear-gradient(to top, $colorPrincipal , $gradienteClaro);
     .imgHeader{
         width: 10%;
         height:100%;
     }
     .miNav{
-        background-image: linear-gradient(to top, #414833 , #778162);
+        background-image: linear-gradient(to top, $colorPrincipal , $gradienteClaro);
         .navHome{
-            font-family: MuseoModerno;
-            color: lightgrey !important;
-            font-size: 18px !important;
+            font-family: $fuente;
+            color: $colorSecundario ;
+            font-size: 18px;
             &:hover{
-                color: rgb(162, 165, 14) !important;
+                color: $colorTerciario;
             }
         }
         .menu li{
-            background-image: linear-gradient(to top, #414833 , #778162);
-            a{
-                font-size: 15px !important;
-                color: lightgray !important;
-                font-family: MuseoModerno;
+            background-image: linear-gradient(to top, $colorPrincipal , $gradienteClaro);
+            .menuNosotros{
+                font-size: 15px;
+                color: $colorSecundario;
+                font-family: $fuente;
                 transition: all 0,5s;
                 &:hover{
-                    color: rgb(162, 165, 14) !important;
+                    color: $colorTerciario;
+                }
+            }
+            a{
+                font-size: 15px;
+                color: $colorSecundario;
+                font-family: $fuente;
+                transition: all 0,5s;
+                &:hover{
+                    color: $colorTerciario;
                 }
             }
             .submenu li{
-                background-image: linear-gradient(to right, #414833 , #778162);
+                background-image: linear-gradient(to right, $colorPrincipal , $gradienteClaro);
                 a:hover{
-                    color: rgb(162, 165, 14) !important;
-                    background-image: linear-gradient(to right, #414833 , #778162);
+                    color: $colorTerciario;
+                    background-image: linear-gradient(to right, $colorPrincipal , $gradienteClaro);
                 }
             }
         }
