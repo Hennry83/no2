@@ -29,6 +29,7 @@ body{
         font-family: $fuente;
         color: $colorSecundario;
         @include flex(flex,column,nowrap);
+        align-items: center;
         margin-left: 5%;
         input{
             transition: all 2s;
@@ -50,7 +51,8 @@ body{
         font-family: $fuente;
         color: $colorSecundario;
         @include flex(flex,row,nowrap);
-        align-items: baseline;
+        align-items: baseline; 
+        justify-content: center;
         p{
             margin-left: 5%;
             color: rgb(3, 3, 51);

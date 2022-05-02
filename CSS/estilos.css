@@ -24,7 +24,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  /* align-items: center;  */
+  justify-content: center;
   text-align: center;
   color: black;
   border-radius: 20px; }
@@ -297,6 +298,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
     margin-left: 5%; }
     .formulario .formulario__contenido input {
       transition: all 2s;
@@ -315,7 +317,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: baseline; }
+    align-items: baseline;
+    justify-content: center; }
     .formulario .chkboxForm p {
       margin-left: 5%;
       color: #030333; }
